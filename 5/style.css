@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 2rem;
+    min-height: 100vh;
+}
+
+.calculator-card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.calculator-header {
+    background-color: gray;
+    color: white;
+    padding: 1.5rem;
+}
+
+.calculator-header h1 {
+    font-weight: 700;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.result-card {
+    border: 2px solid #e9ecef;
+    background-color: white;
+}
+
+.result-card .card-title {
+    color: #495057;
+    font-weight: 600;
+}
+
+.btn-calculate {
+    background: green;
+    border: none;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-calculate:hover {
+    background: green;
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+
+.cost-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-details {
+    font-size: 1rem;
+    color: #6c757d;
+}
