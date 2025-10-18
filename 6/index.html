@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости услуги</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card calculator-card">
+                    <div class="card-header calculator-header text-center">
+                        <h1 class="h3 mb-0">Калькулятор стоимости услуги</h1>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <label for="quantity" class="form-label fw-bold">Количество:</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" 
+                                   value="1" min="1" max="100">
+                            <div class="invalid-feedback" id="quantity-error">
+                                Пожалуйста, введите корректное количество (от 1 до 100)
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Тип услуги:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="serviceType" 
+                                       id="type1" value="basic" checked>
+                                <label class="form-check-label" for="type1">
+                                    Базовая услуга - 500 руб.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="serviceType" 
+                                       id="type2" value="premium">
+                                <label class="form-check-label" for="type2">
+                                    Премиум услуга - 1000 руб.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="serviceType" 
+                                       id="type3" value="vip">
+                                <label class="form-check-label" for="type3">
+                                    VIP услуга - 2000 руб.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-4" id="options-section" style="display: none;">
+                            <label for="options" class="form-label fw-bold">Дополнительные опции:</label>
+                            <select class="form-select" id="options" name="options">
+                                <option value="0">Без опций</option>
+                                <option value="300">Опция 1 (+300 руб.)</option>
+                                <option value="500">Опция 2 (+500 руб.)</option>
+                                <option value="700">Опция 3 (+700 руб.)</option>
+                            </select>
+                        </div>
+                        <div class="mb-4" id="property-section" style="display: none;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="property" name="property">
+                                <label class="form-check-label" for="property">
+                                    Свойство 1 (+1000 руб.)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card result-card mt-4">
+                            <div class="card-body text-center p-3">
+                                <h5 class="card-title mb-2">Стоимость услуги</h5>
+                                <div class="cost-amount" id="total-cost">500 руб.</div>
+                                <div class="cost-details mt-2" id="cost-details">
+                                    Услуга × 1 шт.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center text-muted">
+                        <small>© Куница Артём 2025</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js" defer></script>
+</body>
+</html>

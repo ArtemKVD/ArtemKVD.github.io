@@ -1,0 +1,68 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 2rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.calculator-card {
+    border: none;
+}
+
+.calculator-header {
+    background: gray;
+    color: white;
+}
+
+.calculator-header h1 {
+    font-weight: 700;
+}
+
+.result-card {
+    border: 2px solid white;
+    background: white;
+}
+
+.result-card .card-title {
+    color:black;
+    font-weight: 600;
+}
+
+.cost-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cost-details {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #28a745;
+}
+
+.form-check-input:checked {
+    background-color: #28a745;
+}
+
+.form-check-input:focus {
+    border-color: #28a745;
+}
+
+.card-footer {
+    background-color: rgba(24, 17, 17, 0.03);
+}
+
+
+.form-check-input {
+    margin-left: -1.5rem;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.result-card, #options-section, #property-section {
+    transition: all 0.3s ease;
+}
