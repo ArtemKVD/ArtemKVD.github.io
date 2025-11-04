@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 class="text-center mb-4">Галерея изображений</h1>
+                
+                <div class="gallery-wrapper">
+                    <button class="arrow-btn arrow-left" id="prevBtn" aria-label="Предыдущее изображение">
+                        <span class="arrow-icon">‹</span>
+                    </button>
+                    
+                    <div class="gallery-container">
+                        <div class="gallery-track" id="galleryTrack">
+                            <div class="gallery-item">
+                                <img src="1.jpg" alt="Изображение 1">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="artworks-CQ8DtKBnX72iQLqn-rXz4zQ-t1080x1080.jpg" alt="Изображение 2">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="i (2).webp" alt="Изображение 3">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="4.jpg" alt="Изображение 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="5.webp" alt="Изображение 5">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="6.webp" alt="Изображение 6">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="7.webp" alt="Изображение 7">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="8.webp" alt="Изображение 8">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="arrow-btn arrow-right" id="nextBtn" aria-label="Следующее изображение">
+                        <span class="arrow-icon">›</span>
+                    </button>
+                </div>
+                
+                <div class="pager-container text-center mt-4">
+                    <span id="pagerText">Страница 1 из 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="file.js" defer></script>
+</body>
+</html>
