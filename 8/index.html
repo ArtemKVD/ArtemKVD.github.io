@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="btn-open-form">Открыть форму</button>
+        </header>
+    </div>
+
+    <div class="overlay" id="formOverlay">
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title">Форма обратной связи</h2>
+                <button class="btn-close" id="btnClose">&times;</button>
+            </div>
+            
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="fullName">ФИО</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="organization">Организация</label>
+                <input type="text" id="organization" name="organization" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я согласен на обработку персональных данных</label>
+                </div>
+                
+                <button type="submit" class="btn-submit" id="btnSubmit">Отправить</button>
+                
+                <div class="message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4ff;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 60px auto 40px;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.btn-open-form {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-open-form:hover {
+    background-color: #732d91;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #fdfbff;
+    border: 1px solid #e0e4ff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    position: relative;
+    max-height: calc(100vh - 40px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0; 
+}
+
+.form-title {
+    font-size: 26px;
+    color: #4a3f8f;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+.btn-close:hover {
+    color: #e74c3c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex-shrink: 0; 
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 17px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 150px; 
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 8px;
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.btn-submit {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    flex-shrink: 0; 
+    margin-top: auto; 
+}
+
+.btn-submit:hover {
+    background-color: #e05555;
+}
+
+.btn-submit:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+    flex-shrink: 0; 
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message-visible {
+    display: block !important;
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        padding: 15px;
+    }
+    
+    .form-container {
+        padding: 20px;
+        max-height: calc(100vh - 30px);
+    }
+    
+    .form-title {
+        font-size: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    input, textarea {
+        padding: 8px;
+        font-size: 16px; 
+    }
+    
+    textarea {
+        min-height: 80px;
+        max-height: 120px;
+    }
+    
+    .checkbox-group label {
+        font-size: 12px;
+    }
+    
+    .message {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .overlay {
+        padding: 10px;
+    }
+    
+    .form-container {
+        padding: 15px;
+        max-height: calc(100vh - 20px);
+    }
+    
+    .form-title {
+        font-size: 18px;
+    }
+    
+    .form-header {
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    label {
+        font-size: 13px;
+    }
+    
+    input, textarea {
+        padding: 6px;
+    }
+    
+    textarea {
+        min-height: 70px;
+        max-height: 100px;
+    }
+}
